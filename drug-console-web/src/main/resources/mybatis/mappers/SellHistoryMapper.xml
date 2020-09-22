@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.drug.console.mapper.SellHistoryMapper">
+
+  <select id="getSellHistoryList" parameterType="java.util.List" resultType="com.drug.console.entity.SellHistory">
+    SELECT * FROM sell_history WHERE create_time >= #{start}
+    <if test="end != null">
+      AND create_time  <![CDATA[<= ]]> #{end}
+    </if>
+  </select>
+
+</mapper>
