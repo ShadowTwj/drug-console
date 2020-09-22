@@ -23,6 +23,7 @@ hs_err_pid*
 
 .idea
 *.iml
+rebel.xml
 drug-console-web/target
 
 .DS_Store
